@@ -15,6 +15,10 @@ The project uses the **LSB (Least Significant Bit)** technique on BMP images.
 - Supports BMP images.
 - Hides data from a text file (e.g, `secret.txt`).
 - Command-line interface for encoding and decoding.
+- For encoding:
+    ./stego -e <input.bmp> <secret.txt> [output_stego.bmp]
+- For decoding:
+    ./stego -d <stego.bmp> [output_decoded.txt]
 - Example files:
   - `beautiful.bmp` – sample cover image
   - `secret.txt` – sample secret message
@@ -23,11 +27,6 @@ The project uses the **LSB (Least Significant Bit)** technique on BMP images.
 
 ## Build Instructions
 
-For encoding:
-    ./stego -e <input.bmp> <secret.txt> [output_stego.bmp]
-
-For decoding:
-    ./stego -d <stego.bmp> [output_decoded.txt]
     
 You need a C compiler (like `gcc`).
 
@@ -35,3 +34,5 @@ Compile:
 
 ```bash
 gcc encode.c decode.c test_encode.c -o stego
+
+
